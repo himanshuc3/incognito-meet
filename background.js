@@ -6,6 +6,7 @@ chrome.runtime.onInstalled.addListener(function () {
     chrome.declarativeContent.onPageChanged.addRules([
       {
         conditions: [
+          // hide url content in page (modify page) if meet.google.com/* (except meet.google.com/_meet/*)
           new chrome.declarativeContent.PageStateMatcher({
             pageUrl: { hostEquals: "meet.google.com" },
           }),
