@@ -1,7 +1,13 @@
-let changeColor = document.getElementById("changeColor");
+console = chrome.extension.getBackgroundPage().console;
+console.log('hey')
+let button = document.getElementById('changeColor')
+button.addEventListener('click', function() {
+  let container = document.getElementsByClassName("VwfPgd")[1];
+  console.log(container)
+  if(container){
 
-chrome.storage.sync.get("color", function (data) {
-  changeColor.style.backgroundColor = data.color;
-  console.log(data.color);
-  changeColor.setAttribute("value", data.color);
-});
+    container.style.backgroundColor = 'red'
+  }
+
+})
+

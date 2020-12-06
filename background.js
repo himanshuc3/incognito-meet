@@ -1,3 +1,6 @@
+// 1. Development testing by going to chrome://extensions
+// 2. 
+
 function run() {
   chrome.runtime.onInstalled.addListener(function () {
     chrome.storage.sync.set({ color: "#3aa757" }, function () {
@@ -17,7 +20,7 @@ function run() {
         },
       ]);
     });
-  });
+  })
 }
 
 run();
