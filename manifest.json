@@ -4,8 +4,19 @@
   "description": "Incognito meet",
   "version": "1.0.0",
   "author": "Himanshu chhabra",
-  "permissions": ["storage"],
+  "permissions": ["declarativeContent", "storage"],
   "background": {
     "scripts": ["background.js"]
+  },
+  "page_action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "assets/eye-mask16.png",
+      "32": "assets/eye-mask32.png"
+    }
+  },
+  "icons": {
+    "16": "assets/eye-mask16.png",
+    "32": "assets/eye-mask32.png"
   }
 }
